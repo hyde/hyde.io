@@ -1,0 +1,98 @@
+/***** layout *****/
+
+html
+    background-color #fff
+
+p
+    color gray
+
+body
+    width 980px
+    margin 20px auto
+    font-size 14px
+    font-family 'Open Sans'
+
+hgroup
+    margin-bottom 80px
+
+h1
+    font-size 3.5em
+    text-align center
+    font-weight bold
+
+h2
+    font-size 1.5em
+
+    hgroup &
+        color lighten(gray, 10)
+
+h3
+    text-align center
+    margin-bottom 50px
+    margin -60px 0 70px 0
+    color gray
+
+
+header
+    border-bottom 1px solid #efefef
+    height 40px
+
+    a
+        float left
+
+table
+    width 100%
+
+td
+    border-bottom 1px solid #ddd
+
+th
+    border-bottom 1px solid #999
+    color #999
+
+
+#logo
+    padding 17px 0 3px 110px
+    sprite -44px
+    font-size 10px
+    color #ccc
+
+
+#nav
+    margin 15px 5px 0
+    float right
+
+    a
+        margin-left 30px
+        color gray
+        transition color 0.3s
+
+        &:hover
+            color darken(gray, 20)
+
+#sidebar
+    display none
+
+.active,
+#manifesto #nav_manifesto,
+#tour #nav_tour,
+.doc #nav_documentation,
+.download #nav_download
+    color  #ccc !important
+    cursor default
+
+
+footer
+    border-top 1px solid #efefef
+    padding  padd / 2 0
+    margin-top 50px
+    color #999
+    font-size 12px
+
+    a
+        color gray
+        font-size 90%
+        margin 0 5px
+
+    span
+        float right

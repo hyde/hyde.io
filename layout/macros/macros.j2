@@ -1,0 +1,37 @@
+
+{% macro input(name, value='', type='text', size=20) -%}
+  kama  <input type="{{ type }}" name="{{ name }}" value="{{value|e }}" size="{{ size }}">
+{%- endmacro %}
+
+
+{#
+{% yaml data -%}
+cols: [Property, Default, Description]
+
+# two ways to provide arrays in YAML
+rows:
+  - - speed
+    - 400
+    - the animation duration
+  - [event, "'click'", the event when a tab is opened]
+  - [fadeInSpeed, 200, how fast the opened pane reveals its content]
+{%- endyaml %}
+
+{{ macros.table(data) }}
+#}
+
+{% macro table(data, class='listing') -%}
+<table class="{{class}}">
+    {% for col in data.cols %}
+        <th class="h{{loop.index}}">{{col}}</th>
+    {% endfor %}
+
+    {% for row in data.rows %}
+        <tr>
+        {% for cell in row %}
+            <td class="c{{loop.index}}">{{cell}}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+{%- endmacro %}

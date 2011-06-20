@@ -1,0 +1,69 @@
+<!doctype html>
+
+{#
+    The HTML layout you would like to have on all websites on the globe.
+    This file should change rarely.
+    Many blocks to override.
+#}
+
+{% set meta, node, page = resource.meta, resource.node, resource %}
+
+{# macros #}
+{% import "macros/macros.j2" as macros %}
+
+<html class="no-js">
+
+<head>
+
+    {% block head %}
+
+    <meta charset="utf-8">
+
+    {# use chrome frame & force latest IE engine #}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{ meta.title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keywords" content="{{ meta.keywords }}">
+    <meta name="author" content="{{ meta.author }}">
+
+    {# optimize mobile versions #}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block js %}{% endblock %}
+
+    {% block css %}{% endblock %}
+
+    {% endblock head %}
+
+</head>
+
+<body id="{{ meta.body_id }}" class="{{ meta.body_class }}">
+
+    {% block body %}
+    <div id="wrap">
+
+        {% block wrap %}
+
+        <header id="header" class="clear">
+            {% block header %}{% endblock %}
+        </header>
+
+        <div id="main" class="clear">
+            {% block main %}{% endblock %}
+        </div>
+
+        <footer id="footer" class="clear">
+            {% block footer %}{% endblock %}
+        </footer>
+
+        {% endblock wrap %}
+
+    </div>
+    {% endblock body %}
+
+    {% block bottom %}{% endblock %}
+
+</body>
+
+</html>

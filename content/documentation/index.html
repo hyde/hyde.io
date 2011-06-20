@@ -1,0 +1,91 @@
+---
+title: Hello World
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat, nibh eget lacinia placerat, mauris metus molestie odio, in luctus augue neque a nulla. Aliquam non ornare odio. Aliquam erat volutpat
+---
+
+{% yaml commands %}
+cols:
+    - command
+    - description
+rows:
+  - - hyde -s SITEPATH create -l LAYOUT
+    - Initializes a new site at a given path
+  - - hyde -s SITEPATH create -l LAYOUT
+    - Initializes a new site at a given path
+  - - hyde -s SITEPATH create -l LAYOUT
+    - Initializes a new site at a given path
+  - - hyde -s SITEPATH create -l LAYOUT
+    - Initializes a new site at a given path
+{% endyaml %}
+
+
+{{ macros.table(commands, class='commands') }}
+
+
+## Here is my message
+
+With some introduction to it
+
+~~~html~~~
+<!-- :connect: -->
+<div class="connect">
+    <label>{l.user.connect}</label>
+    <a class="connect-facebook">facebook</a>
+    <label>{l.user.or}</label>
+    <a class="connect-moot">moot</a>
+    <label/>
+</div>
+~~~~~~~~~~~
+
+## And here is another
+
+~~~django~~~
+{% raw %}
+<ul>
+{% for item in seq %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endraw %}
+~~~~~~~~~~
+
+## Foobar
+
+~~~yaml~~~
+context:
+    data:
+        app:
+            current_version: 0.6
+    providers:
+        versions: app-versions.yaml
+~~~~~~~~~~~
+
+Kamista on joo.
+
+
+~~~javascript~~~
+/* Header for your mother */
+
+// this is real or is it
+function Post(moot, json, event) {
+    likeToggle: function(e, fn) {
+        return forum.event("post", e, fn).fire(self);
+    }
+}
+~~~~~~~~~~~
+
+
+~~~css~~~
+/* make forms look sane */
+input, select, textarea {
+    font-size: 99%;
+    padding: 0.2em;
+    border: 1px solid;
+    border-color: #ccc #eee #eee #ccc;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    vertical-align: text-top;
+    border: 0;
+}
+~~~~~~~~~~~

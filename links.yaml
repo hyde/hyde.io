@@ -1,0 +1,6 @@
+
+# central repository for external links. easy to run trough a validator.
+
+markdown: http://daringfireball.net/projects/markdown/
+jinja: http://jinja.pocoo.org/
+jinja_docs: http://jinja.pocoo.org/docs/templates/

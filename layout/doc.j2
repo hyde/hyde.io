@@ -1,0 +1,33 @@
+{% extends "app.j2" %}
+
+{% block content %}
+    <hgroup>
+        <h1>{{ meta.title }}</h1>
+        <h2>{{ meta.description }}</h2>
+    </hgroup>
+{% endblock %}
+
+
+{% block sidebar %}
+
+    <h3 class="top">Get started</h3>
+    <a class="active" href="index.html">hello world</a>
+    <a href="command-line.html">command line</a>
+    <a href="configuration.html">configuration</a>
+
+    <h3>Basics</h3>
+    <a href="layout.html">layout</a>
+    <a href="content.html">content</a>
+    <a href="data.html">data</a>
+    <a href="templating.html">templating</a>
+
+
+    <h3>Plugins</h3>
+    <a href="css.html">CSS</a>
+    <a href="compression.html">compression</a>
+    <a href="images.html">images</a>
+
+    <h3>Advanced</h3>
+    <a href="extending.html">extending hyde</a>
+
+{% endblock %}

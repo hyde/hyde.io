@@ -1,0 +1,116 @@
+---
+extends: app.j2
+default_block: markdown
+title: Hyde Manifesto
+body_id: manifesto
+body_class: tour
+---
+
+# Nothing beats static content
+### Always up, more traffic, longer visits and a good night sleep
+
+<div id="chart">
+
+    <div class="bar">
+        <label>Django</label>
+        <span style="width:2px"></span>
+        <strong>100 requests per second</strong>
+    </div>
+    <div class="bar">
+        <label>Django, cached</label>
+        <span style="width:20px"></span>
+        <strong>500</strong>
+    </div>
+    <div class="bar" id="bar_static">
+        <label>Static file</label>
+        <span style="width:700px"></span>
+        <strong>7000</strong>
+    </div>
+
+  <p><strong>nginx</strong> serving a page with a simple Python code</p>
+
+</div>
+
+
+- ## As fast as it gets
+    Static pages are served directly without any processing. CPU intensive work such as templating, minification and gzipping are done beforehand.
+    Dynamic pages are generated on every page request slowing it down. The fact is that nothing beats static content. Nothing.
+
+- ## Always running
+  Static site is always up. It never crashes. Sudden traffic increase is genuinely welcome.
+  A heavy burden taken away from every member working on the site. 100% uptime is an unreachable and expensive dream for dynamic websites.
+
+- ## 100% secure
+  Dynamic sites are on constant fight against various kinds of attacks. DOS attacks are not rare. You see security updates all over the web.
+  Static content will put an end to it. There are no holes.
+
+- ## Cacheable
+  A page served from browser's cache loads immediately without network traffic. This essential performance pattern is too often ignored.
+  Typically only CSS, images and JavaScript is cached. Now you can do the same for your content.
+
+- ## Previewable
+  The generated site is just a directory on the local computer. It's easy to go trough the pages and see the final result before uploading
+  the site to the live server. You can be sure that the site works similarly on production. No hidden surprises.
+
+- ## Cheap and portable
+  Static pages can be installed on any web server. You are not tied to any programming language or server framework.
+  No complex database or library dependencies to keep up to. Just drop a folder. And it's cheap! It does not eat memory or CPU.
+
+
+---
+
+# Static content. Dynamic services.
+![Static content + dynamic services](http://dribbble.com/system/users/1211/screenshots/79771/shot_1289941112.jpg?1304360443)
+
+-   ## Overall stability
+
+    When dynamics are separated from the site to task-focused services they are not dependent on each other.
+    If a service fails the site keeps running. And while you can be sure that static site is always running it will never crash the services.
+
+-   ## Global reach
+
+    When a service is decoupled from the site it becomes a self hosting entity with a clean API.
+    The service can be used by multiple sites and different devices. It can be for your own use only or you can build a global service for everyone to enjoy.
+
+-   ## Developer friendly
+
+    Ruby, python, node.js, PHP, Java and combinations - anything can be used to build a service. There's only an interface to be implemented.
+    The client does not matter what's behind it. Developers love this.
+
+-   ## Management friendly
+
+    The project can use developers with different backgrounds. Without language restrictions you can pick the best skills around.
+    You are forced to design your system well resulting better products in less time to market.
+
+-   ## JavaScript
+
+    The glue between the site and the services is JavaScript which today is enabled in 99.5% of browsers. It's completely safe to use it.
+    So does anyone else. You cannot see nothing if JavaScript is disabled in twitter.com and they do pretty well.
+
+---
+
+# Plain text is forever
+![Markdown syntax](http://dribbble.com/system/users/455/screenshots/15159/shot_1271111579.png?1301523495)
+
+
+- ## Forget web interfaces
+    Nothing beats plain text and the editor you love. It's easy to get lost with databases and web based content management.
+    This is obvious for hackers but now also for everyone working on the site.
+
+- ## Everything is a text file
+  This old UNIX philosophy is essential for a web developer. You need a direct access to content, layout, style and logic.
+  No extra markup or hidden surprises. Just plain text and complete control.
+
+- ## Modern editors
+  Templates, snippets, keyboard shortcuts, syntax highlight, shell, spell checking &hellip; Textmate, jEdit, eclipse, emacs, VIM &hellip;
+  A religious, lifetime relationship. You get better every day.
+
+- ## Versioning and backup
+  Life is easier with plain text than with a database. With ersion management you have group editing, update history and backups without you even knowing it.
+  Not to mention the great tricks you can do with Git or Mercurial.
+
+- ## Edit and publish
+  Edit a file locally and run a single command to publish it. No admin interfaces or weird idioms. Not even a need for internet connection.
+
+
+[Enter Hyde{@class=herobutton}](tour.html)

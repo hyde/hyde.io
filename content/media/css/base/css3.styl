@@ -1,0 +1,34 @@
+
+/* Cross browser CSS3 */
+
+vendor-prefixes = webkit moz
+
+vendor(prop, args)
+    for prefix in vendor-prefixes
+        {'-' + prefix + '-' + prop}: args
+    {prop}: args
+
+box-shadow()
+    vendor('box-shadow', arguments)
+
+border-radius()
+    vendor('border-radius', arguments)
+
+transition()
+    vendor('transition', arguments)
+
+transform()
+    vendor('transform', arguments)
+
+border-image()
+    vendor('border-image', arguments)
+
+linear-gradient(from = #f9f9f9, to = #ddd)
+    background-color from
+    background-image -moz-linear-gradient(from, to)
+    background-image -webkit-gradient(linear, 0 0, 0 100%, from(from), to(to))
+
+radial-gradient(from = #f9f9f9, to = #ddd, size = 50%)
+    background-color from
+    background -moz-radial-gradient(center, from, to) no-repeat to
+    background -webkit-gradient(radial, size size, 0, size size, 500, from(from), to(to)) no-repeat to

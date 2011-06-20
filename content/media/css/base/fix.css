@@ -1,0 +1,137 @@
+/* Bring back the most obvious defaults after CSS reset */
+
+/* headers */
+h1, h2, h3, h4, h5, h6, dt {
+    margin: 1.5em 0 -0.5em 0;
+}
+
+h1 {
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 1.8em;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+}
+
+h4, h5, h6 {
+    font-weight: bold;
+}
+
+/* HTML5 elements */
+article, aside, details, footer, header, hgroup, mark, menu, nav, section {
+    display: block;
+}
+
+/* bolded */
+strong, b, dt {
+    font-weight: bold;
+}
+
+/* italic */
+em, i, caption {
+    font-style: italic;
+}
+
+/* highlighted */
+mark {
+    background-color: #ff0;
+}
+
+/* code */
+pre, code {
+    font-family: Monaco, "Lucida Console", "courier new", monospace;
+}
+
+/* margin for block level elements */
+p, table, ul, ol, hr, dd {
+    margin: 1em 0;
+}
+
+li {
+    margin-left: 2em;
+}
+
+blockquote {
+    margin: 2em;
+}
+
+/* horizontal rule */
+hr {
+    border: 1px solid #ddd;
+    border-width: 1px 0 0;
+}
+
+/* tables */
+td, th {
+    padding: .3em .5em;
+}
+
+th {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* form */
+input, select, textarea {
+    font-size: 99%;
+    padding: 0.2em;
+    border: 1px solid;
+    border-color: #ccc #eee #eee #ccc;
+    border-radius: 2px;
+}
+
+textarea {
+    width: 100%;
+}
+
+select {
+    background-color: #fff;
+}
+
+button, input[type="button"] {
+    border: 1px outset #ddd;
+    cursor: pointer;
+    font-weight: bold;
+    padding: .2em 1em;
+    text-shadow: 0 1px 1px #fff;
+    border-radius: 11px;
+    linear-gradient: #fff #ddd;
+}
+
+button:active, input[type="button"]:active {
+    border: 1px inset #ddd;
+    box-shadow: 3px #0066FF;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    vertical-align: text-top;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* clearfix */
+.clear {
+    display: block;
+}
+
+.clear:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+* html .clear {
+    height: 1%;
+}

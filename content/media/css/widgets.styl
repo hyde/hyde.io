@@ -1,0 +1,38 @@
+
+@font-face
+    font-family 'Open Sans'
+    font-style normal
+    font-weight normal
+    src url('http://themes.googleusercontent.com/static/fonts/opensans/v1/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff') format('woff')
+
+
+sprite(top = 0, left = 0)
+    display block
+    background url(../img/sprite.gif) no-repeat left top
+
+
+.herobutton
+    color #fff
+    font-size 1.5em
+    font-weight bold
+    padding 15px 25px
+    text-align center
+    background-color pink
+    margin 70px auto 30px auto
+    display block
+    width 220px
+    border-radius 8px
+
+
+    &:hover
+        box-shadow 40px
+        linear-gradient(lighten(pink, 5), darken(pink, 5))
+
+    &:active
+        background-image none
+        background-color darken(pink, 10)
+
+
+.box
+    padding 12px
+    box-shadow 0 0 5px #ccc

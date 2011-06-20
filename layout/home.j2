@@ -1,0 +1,62 @@
+{% extends "app.j2" %}
+
+{% block content %}
+
+<hgroup>
+    <h1>{{meta.title}}</h1>
+    <h2>{{meta.description}}</h2>
+</hgroup>
+
+<div id="features" class="clear">
+
+    {# 1 #}
+    <div class="feat">
+
+        <div class="box" id="feat1">
+            <div class="clear">
+                <div class="file">content</div>
+                <div class="file">layout</div>
+                <div class="file">style</div>
+                <div class="file">logic</div>
+            </div>
+        </div>
+
+        <section>
+            {% markdown %}{% block feat1 %}{% endblock %}{% endmarkdown %}
+        </section>
+
+    </div>
+
+    <span class="arrow"></span>
+
+    {# 2 #}
+    <div class="feat" id="feat2">
+
+        <div class="flower"></div>
+
+        <section>
+            {% markdown %}{% block feat2 %}{% endblock %}{% endmarkdown %}
+        </section>
+
+    </div>
+
+    <span class="arrow"></span>
+
+    {# 3 #}
+    <div class="feat" id="feat3">
+
+        <div class="box clear">
+            <div class="file">static website</div>
+        </div>
+
+        <section>
+            {% markdown %}{% block feat3 %}{% endblock %}{% endmarkdown %}
+        </section>
+
+    </div>
+
+</div>
+
+<a class="herobutton" href="manifesto.html">Read Manifesto</a>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+
+# can be overridden on folder and page level (meta.yaml / page config block)
+meta:
+    title: Default title
+    description: Default description
+    keywords: Default keywords
+    author: Tero Piirainen
+
+    # CSS helper classes for body element
+    body_id: body
+    body_class: body
+
+    # name of the folder level configuration file
+    nodemeta: meta.yaml
+
+    # TODO
+    charset: utf-8
+
+# site wide data available everywhere
+context:
+    data:
+        foo: bar
+
+    # YAML for data. Generate from database etc.
+    providers:
+        links: links.yaml
+
+# TODO
+mode: development
+media_url: /media
+media_root: media
+deploy_root: deploy
+template: hyde.ext.jinja2
+
+
+# plugins
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.blockdown.BlockdownPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.grouper.GrouperPlugin
+    - hyde.ext.plugins.markings.MarkingsPlugin
+    - hyde.ext.plugins.markings.ReferencePlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+    - hyde.ext.plugins.textlinks.TextlinksPlugin
+    - hyde.ext.plugins.stylus.StylusPlugin
+
+stylus:
+    app: /usr/local/bin/stylus
+
+markdown:
+    extensions:
+        - def_list
+        - headerid
+
+flattener:
+    items:
+        -
+            source: media/img/favicon.ico
+            target: ''
+        -
+            source: media/img/apple-touch-icon.png
+            target: ''

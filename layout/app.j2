@@ -1,0 +1,62 @@
+{% extends "root.j2" %}
+
+{#
+    Extends root with more specific application logic.
+
+    Still very general stuff:
+        - Most headers include a section for branding and search but not always.
+        - Head JS is used to load scripts. Speed is increased but not always wanted.
+#}
+
+{% block js %}
+
+    {# "Speed up, simplify and modernize." http://headjs.com #}
+    <script src="{{ media_url('js/head.min.js') }}"></script>
+
+    <script>
+    head.js({ jquery: "https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" });
+
+    {% if meta.analytics %}
+        head.js({ "analytics: "http://www.google-analytics.com/ga.js" }, function() {
+            var tracker = _gat._getTracker("{{meta.analytics}}");
+            tracker._trackPageview();
+        });
+    {% endif %}
+    </script>
+
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ media_url('css/style.css') }}">
+{% endblock %}
+
+
+{% block header %}
+    <a href="/index.html" id="logo">the static website generator</a>
+
+    <nav id="nav">
+        <a id="nav_manifesto" href="/manifesto.html">manifesto</a>
+        <a id="nav_tour" href="/tour.html">feature tour</a>
+        <a id="nav_documentation" href="/documentation/index.html">documentation</a>
+        <a id="nav_download" href="/download.html">download</a>
+    </nav>
+{% endblock %}
+
+
+{% block main %}
+
+    <div id="content">
+        {% block content %}{% endblock %}
+        {% markdown %}{% block markdown %}{% endblock %}{% endmarkdown %}
+    </div>
+
+    <aside id="sidebar" class="sidebar">
+        {% block sidebar %}{% endblock %}
+    </aside>
+
+{% endblock %}
+
+{% block footer %}
+    &copy; Hyde Inc &nbsp; &bull; <a href="about">About</a> &bull; <a href="about">Twitter</a>
+    <span>Fork us on <a href="about">Github</a></span>
+{% endblock %}

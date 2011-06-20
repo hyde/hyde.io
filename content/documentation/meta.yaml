@@ -1,0 +1,3 @@
+extends: doc.j2
+default_block: markdown
+body_class: doc
